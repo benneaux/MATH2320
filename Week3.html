@@ -169,9 +169,14 @@ It can be shown that the set of all functions described in Equation (1) (with <s
 <li>Write the vector <span class="math">\((9, 8, 16)\)</span> as a linear combination of the vectors in <span class="math">\(B\)</span>.</li>
 <li>Does the list of vectors <span class="math">\(B\)</span> span <span class="math">\(\mathbb{R}^3\)</span>? Explain why/why not.</li>
 </ol>
+<<<<<<< HEAD
 <p></p>
 <p><strong>Answer:</strong> The vector <span class="math">\(\vec{t} \in span(B): \vec{t} = (9,8,16)\)</span> can be defined as a combination of three vectors <span class="math">\(\vec{u},\vec{v},\vec{w},\in B: \vec{u} = (1,0,0), \vec{v} = (1,1,0) \text{ and } \vec{w} = (1,1,1)\)</span> by the relationship <span class="math">\(\vec{t} = (16\cdot \vec{w}) - (8 \cdot \vec{v}) + (1 \cdot \vec{u})\)</span>.</p>
 <p>The list of vectors in <span class="math">\(B\)</span> - defined above - do span <span class="math">\(\mathbb{R}^3\)</span> because we can define a relationship: <span class="math">\[\begin{align} &amp;\forall \vec{t} \in \mathbb{R}^3: \quad \vec{t} = (\alpha,\beta,\gamma) &amp;\alpha,\beta,\gamma \in \mathbb{F} \\ \implies &amp;\vec{t} := (\gamma)\cdot\vec{w} + (\beta-\gamma)\cdot\vec{v} + (\alpha-\beta)\cdot\vec{u} &amp;\vec{u},\vec{v},\vec{w},\in B \end{align}\]</span> Therefore, any vector in <span class="math">\(\mathbb{R}^3\)</span> can be expressed in terms of the list of vectors in <span class="math">\(B\)</span>, which implies that <span class="math">\(B\)</span> spans <span class="math">\(\mathbb{R}^3\)</span>.</p></li>
+=======
+<p><strong>Answer:</strong> The vector <span class="math inline">\(\vec{t} \in span(B): \vec{t} = (9,8,16)\)</span> can be defined as a combination of three vectors <span class="math inline">\(\vec{u},\vec{v},\vec{w},\in B: \vec{u} = (1,0,0), \vec{v} = (1,1,0) \text{ and } \vec{w} = (1,1,1)\)</span> by the relationship <span class="math inline">\(\vec{t} = (16\cdot \vec{w}) - (8 \cdot \vec{v}) + (1 \cdot \vec{u})\)</span>.</p>
+<p>The list of vectors <span class="math inline">\(B\)</span> does span <span class="math inline">\(\mathbb{R}^3\)</span> because: <span class="math display">\[\begin{align} &amp;\forall \vec{t} \in \mathbb{R}^3\left\{ \vec{t} := (\alpha,\beta,\gamma): \alpha,\beta,\gamma \in \mathbb{F} \right\} \\ \implies &amp; \vec{u},\vec{v},\vec{w} \in B, \; \exists \vec{t} \in \mathbb{R}^3 := ((\gamma)\cdot\vec{w}) + ((\beta-\gamma)\cdot\vec{v}) + ((\alpha-\beta)\cdot\vec{u}) \end{align}\]</span> It is also trivially true that <span class="math inline">\(\vec{0} \in span(B)\)</span> by the properities of the field <span class="math inline">\(\mathbb F\)</span>.</p></li>
+>>>>>>> b8b42f629c6bd06cdf6de9536a13a91385f1b407
 </ol>
 <hr />
 </div>

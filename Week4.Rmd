@@ -1,0 +1,54 @@
+---
+title: "MATH2320 Assignment 3"
+author: "Benjamin G. Moran, c3076448@uon.edu.au"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    includes: 
+      before_body: eqnnumber.js
+    mathjax: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Due:** 5pm Tuesday 16th August 2016.
+
+If you have any questions about this assignment, please see or email your lecturer for this course, Dr Daniel Sutherland <Daniel.Sutherland@newcastle.edu.au>.
+
+***
+###Questions which review material from Week 2:
+
+1.	Let $P_3(\mathbb{C})$ be the vector space of complex polynomials with degree less than or equal to $3$.
+a)	Show that the list of vectors $B =  (x-1, (x-1)^2)$  is linearly independent.
+b)	Show that $B$ does not span $P_3(\mathbb{C})$ by giving an example of a vector in $P_3(\mathbb{C})$ that does not belong to the span of $B$.
+c)	Denote the vector that you found in the previous part by $p$, and create a new list of vectors $B' = (x-1, (x-1)^2,p)$ . Is $B'$ linearly independent? Is $B'$ a basis for $P_4(\mathbb{C})$? *Why/Why not?*
+
+2. Consider the following subspaces of $\mathbb{F}_4$:$$V_1 = span\left((1,-1,0,0),(1,0,0,-1)\right)	\text{ and }	V_2 = span\left((0,1,0,-1),(0,-1,0,1)\right)$$
+
+a)	What are the dimensions of these subspaces?
+b)	Show that $V_1$ spans $V_2$. Hence, what is $V_1 \cap V_2$?
+c)	Use the below theorem together with your previous answers to determine dim$(V_1 + V_2)$.
+
+    **Theorem 2.18**: *If $U_1$ and $U_2$ are subspaces of a  nite-dimensional vector space, then* $$\text{dim}(U_1 + U_2) = \text{dim}U_1 + \text{dim}U_2	- \text{dim}(U_1 \cap U_2).$$
+
+###Introductory level question relating to Week 3:
+3.	Consider the map $T: \mathbb{R}^2 \implies \mathbb{R}$ given by the rule $T(x,y) = 2x + 3y$.
+
+(a)	Show that $T$ is a linear map.
+
+(b)	Find the null space of $T$ , and sketch this space.
+
+(c)	Is the linear map $T$ injective? *Why/Why not?*
+
+*Hint: Is there a result from the textbook that might help you?*
+
+###Extension question - will not be marked, just for interest!
+
+4. Define a collection of "forward shift" maps $T_\lambda: \mathbb{F}^\infty \implies \mathbb{F}^\infty$ for $\lambda \in \mathbb{F}$ by the rule
+$$T_\lambda(x_1, x_2, x_3, ...) = ( \lambda, x_1, x_2, ...).$$
+For what value(s) of $\lambda$	is $T_\lambda$  a linear map? For these value(s) of	$\lambda$, is $T_\lambda$  injective? surjective?
+
+
+
