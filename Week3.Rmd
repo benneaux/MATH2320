@@ -54,17 +54,11 @@ $$ y(t) = c_1 cos(\omega t) + c_2 sin(\omega t); $$ where $\omega$ is a constant
     (a)	Write the vector $(9, 8, 16)$ as a linear combination of the vectors in $B$.
     (b)	Does the list of vectors $B$ span $\mathbb{R}^3$? Explain why/why not.
     
-<<<<<<< HEAD
     \hfill
     
     **Answer:** The vector $\vec{t} \in span(B): \vec{t} = (9,8,16)$ can be defined as a combination of three vectors $\vec{u},\vec{v},\vec{w},\in B: \vec{u} = (1,0,0), \vec{v} = (1,1,0) \text{ and } \vec{w} = (1,1,1)$ by the relationship $\vec{t} = (16\cdot \vec{w}) - (8 \cdot \vec{v}) + (1 \cdot \vec{u})$.
     
     The list of vectors in $B$ - defined above - do span $\mathbb{R}^3$ because we can define a relationship: $$\begin{aligned} &\forall \vec{t} \in \mathbb{R}^3: \quad \vec{t} = (\alpha,\beta,\gamma) &\alpha,\beta,\gamma \in \mathbb{F} \\ \implies &\vec{t} := (\gamma)\cdot\vec{w} + (\beta-\gamma)\cdot\vec{v} + (\alpha-\beta)\cdot\vec{u} &\vec{u},\vec{v},\vec{w},\in B \end{aligned}$$ Therefore, any vector in $\mathbb{R}^3$ can be expressed in terms of the list of vectors in $B$, which implies that $B$ spans $\mathbb{R}^3$.
-=======
-    **Answer:** The vector $\vec{t} \in span(B): \vec{t} = (9,8,16)$ can be defined as a combination of three vectors $\vec{u},\vec{v},\vec{w},\in B: \vec{u} = (1,0,0), \vec{v} = (1,1,0) \text{ and } \vec{w} = (1,1,1)$ by the relationship $\vec{t} = (16\cdot \vec{w}) - (8 \cdot \vec{v}) + (1 \cdot \vec{u})$.
-    
-    The list of vectors $B$ does span $\mathbb{R}^3$ because: $$\begin{align} &\forall \vec{t} \in \mathbb{R}^3\left\{ \vec{t} := (\alpha,\beta,\gamma): \alpha,\beta,\gamma \in \mathbb{F} \right\} \\ \implies & \vec{u},\vec{v},\vec{w} \in B, \; \exists \vec{t} \in \mathbb{R}^3 := ((\gamma)\cdot\vec{w}) + ((\beta-\gamma)\cdot\vec{v}) + ((\alpha-\beta)\cdot\vec{u}) \end{align}$$ It is also trivially true that $\vec{0} \in span(B)$ by the properities of the field $\mathbb F$.
->>>>>>> b8b42f629c6bd06cdf6de9536a13a91385f1b407
     
 
 ***

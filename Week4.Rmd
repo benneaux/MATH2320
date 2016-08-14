@@ -23,7 +23,10 @@ If you have any questions about this assignment, please see or email your lectur
 1.	Let $P_3(\mathbb{C})$ be the vector space of complex polynomials with degree less than or equal to $3$.
 a)	Show that the list of vectors $B =  (x-1, (x-1)^2)$  is linearly independent.
 b)	Show that $B$ does not span $P_3(\mathbb{C})$ by giving an example of a vector in $P_3(\mathbb{C})$ that does not belong to the span of $B$.
-c)	Denote the vector that you found in the previous part by $p$, and create a new list of vectors $B' = (x-1, (x-1)^2,p)$ . Is $B'$ linearly independent? Is $B'$ a basis for $P_4(\mathbb{C})$? *Why/Why not?*
+c)	Denote the vector that you found in the previous part by $p$, and create a new list of vectors $B' = (x-1, (x-1)^2,p)$ . Is $B'$ linearly independent? Is $B'$ a basis for $P_3(\mathbb{C})$? *Why/Why not?*
+
+**Answer** First, let's rewrite $B$ in terms of the coeffiecients $a_n$ of the $x^n$ terms. We can express $B$ as $$B:=\left\{ \begin{bmatrix} -1 \\ 1 \\ 0 \\ 0 \end{bmatrix},\begin{bmatrix}1 \\-2 \\ 1 \\ 0 \end{bmatrix}\right\}.$$ Nothing we can do to the first vector will give us $1$ as the $x^2$ coefficient. Therefore, the two vectors are independent. 
+We cannot create a new vector $p=(0,0,0,1)$ from any combination of the two vectors in $B$. Therefore, the vectors in $B$ do not span $P_3(\mathbb{C})$. If we add this vector $p$ to the set $B$, the resulting set $B'$ must still be linearly independent, because we have added a vector that was not in the span of $B$, whose vectors we have previously shown to be linearly independent. However, $B'$ still does not span $P_3(\mathbb{C})$ because there is not a combination of vectors in $B'$ that will give us the vector $v=(1,0,0,0)$. Therefore $B'$ is not a basis for $P_3(\mathbb{C})$.
 
 2. Consider the following subspaces of $\mathbb{F}_4$:$$V_1 = span\left((1,-1,0,0),(1,0,0,-1)\right)	\text{ and }	V_2 = span\left((0,1,0,-1),(0,-1,0,1)\right)$$
 
@@ -32,6 +35,8 @@ b)	Show that $V_1$ spans $V_2$. Hence, what is $V_1 \cap V_2$?
 c)	Use the below theorem together with your previous answers to determine dim$(V_1 + V_2)$.
 
     **Theorem 2.18**: *If $U_1$ and $U_2$ are subspaces of a  nite-dimensional vector space, then* $$\text{dim}(U_1 + U_2) = \text{dim}U_1 + \text{dim}U_2	- \text{dim}(U_1 \cap U_2).$$
+    
+    **Answer** We can rewrite the vectors in $V_2$ using the vectors in $V_1$: $$\begin{aligned} (0,1,0,-1) &= (1,0,0,-1) - (1,-1,0,0) \\ (0,-1,0,1) &= (1,-1,0,0) - (1,0,0,-1) \end{aligned}.$$ Therefore, $V_1$ spans $V_2$ and $V_1 \cap V_2 = V_2$. Using this answer, we can say that: $$\begin{aligned}\text{dim}(V_1 + V_2) &= \text{dim}V_1 + \text{dim}V_2	- \text{dim}(V_1 \cap V_2) \\ &= \text{dim}V_1 + \text{dim}V_2	- \text{dim}(V_2) \\ &= \text{dim}V_1 \\ &= \end{aligned}$$
 
 ###Introductory level question relating to Week 3:
 3.	Consider the map $T: \mathbb{R}^2 \implies \mathbb{R}$ given by the rule $T(x,y) = 2x + 3y$.
@@ -43,6 +48,11 @@ c)	Use the below theorem together with your previous answers to determine dim$(V
 (c)	Is the linear map $T$ injective? *Why/Why not?*
 
 *Hint: Is there a result from the textbook that might help you?*
+
+**Answer:** We need to show that $T$ is closed under additivity and homogeneity. First, Define two vectors $u:=(x_1,y_1)$ and $v:=(x_2,y_2)$. Then:
+$$\begin{aligned} T(u) + T(v) &= 2x_1 + 3y_1 + 2x_2 + 3y_2 \\ &= 2(x_1+x_2) + 3(y_1 + y_2) \\ &= T(u+v) \end{aligned}$$
+Therefore, $T$ is closed under additivity. Next, define a vector $w:=(x,y) \implies \forall a \in \mathbb{F}, aw:=(ax,ay)$. Then,
+$$\begin{aligned} T(aw)&= 2ax + 3ay \\ &= a(2x + 3y) \\ &= aT(w)\end{aligned}.$$ Therefore, $T$ is closed under homogeity. Next we define $T$ as a matrix $A$ such that $$A: = \begin{bmatrix} 2 \\ 3 \end{bmatrix} \implies \forall v:=(x,y) \in \mathbb{R}^2, T(v) = Av = (x,y)\times \begin{bmatrix} 2 \\ 3 \end{bmatrix} = (2x+3y) \in \mathbb{R}.$$ We know that in order for a vector $v$ to be an element of $null \> T$, $Av = 0$. It is obvious that the only vector $v=(x,y)$ that satisfies this is the zero vector. Therefore, $null \> T=\{\vec{0}\}$. Lastly - by Proposition 3.2 in the set text - because the kernel of $T$ only contains $\vec{0}$, $T$ must be injective.
 
 ###Extension question - will not be marked, just for interest!
 
