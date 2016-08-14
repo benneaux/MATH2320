@@ -2,7 +2,7 @@
   MathJax.Hub.Config({
     TeX: { 
       equationNumbers: { 
-        autoNumber: "all",
+        autoNumber: "none",
         formatNumber: function (n) {return n}
       } 
     }
