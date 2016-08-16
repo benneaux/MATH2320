@@ -1,0 +1,71 @@
+---
+title: "MATH2320 Assignment 4"
+author: "Benjamin G. Moran, c3076448@uon.edu.au"
+date: "23 August 2016"
+output:
+  html_document:
+    includes:
+      before_body: eqnnumber.js
+    mathjax: default
+  pdf_document: null
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Due:** 5pm Tuesday 23rd August 2016.
+
+If you have any questions about this assignment, please see or email your lecturer for this course, Dr Daniel Sutherland <Daniel.Sutherland@newcastle.edu.au>.
+
+***
+
+#####Questions which review material from Week 3:
+
+1. Consider the system of simultaneous linear equations
+
+$$\begin{aligned} a_{11} x_1 + a_{12} x_2 + \cdots& + a_{1n} x_n &= 0 \\ 
+a_{21} x_1 + a_{22} x_2 + \cdots& + a_{2n} x_n &= 0 \\ 
+\vdots&  &\vdots \\
+a_{m1} x_1 + a_{m2} x_2 + \cdots& + a_{mn} x_n &= 0
+\end{aligned}$$
+
+for constants $a_{ij}$ and unknowns $x_j$, in the case where $m < n$ (i.e. where there are more unknowns than equations).
+
+Use some results from the course so far to prove that there must exist in nitely many solutions to this system of equations.
+
+*Hint: There's a vague hint hidden in one of the lecture recordings!*
+
+***
+2. Recall that for $T \in \mathcal{L}(V, W )$, where $V$ has basis $B = (v_1, \cdots, v_n)$ and where $W$ has basis $B' = (w_1,\cdots,w_m)$, that the matrix representation of $T$ is the matrix of column vectors: 
+$$\mathcal{M}(T) =\left([T_{v1}]_B' \quad [T_{v2}]_B'	\> \cdots	\> [T_{vn}]_B'\right)$$
+Define the linear map $T \in \mathcal{L}(\mathcal{P}_1(\mathbb{R}), \mathbb{R})$ by
+$$T(p(x)) =	\int_{0}^{1}p(x) dx$$
+to be definite integration over the interval $[0, 1]$.
+
+(a)	Find $\mathcal{M}(T)$ with respect to the standard bases $\mathcal{B} = (1,x)$ and $\mathcal{B}' = (1)$ of $\mathcal{P}_1(\mathbb{R})$ and $\mathbb{R}$.
+
+(b)	Use $\mathcal{M}(T)$ to find $\int_{0}^{1}(3+5x)dx$ through matrix multiplication. Afterwards, check that your result agrees with what you get by directly doing the integration.
+
+***
+#####Introductory level question relating to Week 4:
+
+3. Consider the linear operator $T \in \mathcal{L}(\mathbb{R}^2)$ defined by
+$$T(x,y) = (3x + 2y, 3x	2y).$$
+    
+    (a)	Either show that this operator is injective or surjective -- your choice!
+    (b)	Use a result from the course to conclude that $T$ must be an invertible operator.
+    (c) Show that the one-dimensional subspace $U = span (1,	3)$  is invariant under $T$.
+
+
+#####Extension question - will not be marked, just for interest!
+
+3.	(d) Find another one-dimensional subspace $V \neq U$ which is also invariant under $T$. Sketch both subspaces $U$ and $V$, and show that $U \oplus V = \mathbb{R}^2$.
+    (e) For every non-zero choice of $u \in U$ and $v \in V$, explain why $B = (u, v)$ is a basis of $\mathbb{R}^2$.
+    (f) Pick non-zero $u \in U$ and $v \in V$. Find $\mathcal{M}(T)$ with respect to the bases $B = B' = (u, v)$.
+
+***
+
+#####Submitting your assignment (due 5pm Tuesday 23rd August 2016)
+
+*Submit your assignment in hardcopy in your Demonstrator's pigeonhole in the Assignment boxes near the Maths Clinic, on the opposite wall to the Maths Clinic, left of the door to V109. We also ask that you scan your written work and submit it on the MATH2320 UoNline/Blackboard site as a backup and proof of submission, not as a substitute. __Note that we still require the hardcopy submitted in the Assignment Box for your Demonstrator to mark, even if you have submitted a backup on Blackboard.__*

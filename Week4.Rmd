@@ -1,8 +1,9 @@
 ---
 title: "MATH2320 Assignment 3"
 author: "Benjamin G. Moran, c3076448@uon.edu.au"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+date: "16 August 2016"
 output: 
+  pdf_document:
   html_document:
     includes: 
       before_body: eqnnumber.js
@@ -36,7 +37,10 @@ c)	Use the below theorem together with your previous answers to determine dim$(V
 
     **Theorem 2.18**: *If $U_1$ and $U_2$ are subspaces of a  nite-dimensional vector space, then* $$\text{dim}(U_1 + U_2) = \text{dim}U_1 + \text{dim}U_2	- \text{dim}(U_1 \cap U_2).$$
     
-    **Answer** We can rewrite the vectors in $V_2$ using the vectors in $V_1$: $$\begin{aligned} (0,1,0,-1) &= (1,0,0,-1) - (1,-1,0,0) \\ (0,-1,0,1) &= (1,-1,0,0) - (1,0,0,-1) \end{aligned}.$$ Therefore, $V_1$ spans $V_2$ and $V_1 \cap V_2 = V_2$. Using this answer, we can say that: $$\begin{aligned}\text{dim}(V_1 + V_2) &= \text{dim}V_1 + \text{dim}V_2	- \text{dim}(V_1 \cap V_2) \\ &= \text{dim}V_1 + \text{dim}V_2	- \text{dim}(V_2) \\ &= \text{dim}V_1 \\ &= \end{aligned}$$
+    **Answer** We can calculate the dimension of each subsapce by finding the reduced-row echelon form of the matrices formed by each collection of vectors. For $V_1$:
+    $$V_1 :=\begin{bmatrix} 1 & 1\\ -1 & 0 \\ 0 & 0 \\ 0 & -1 \end{bmatrix} \xrightarrow{R^*_2 = R_2 + R_1} \begin{bmatrix} 1 & 1\\ 0 & 1 \\ 0 & 0 \\ 0 & -1\end{bmatrix} \xrightarrow{R^*_4 = R_4 + R_2} \begin{bmatrix} 1 & 1\\ 0 & 1 \\ 0 & 0 \\ 0 & 0\end{bmatrix} \xrightarrow{R^*_1 = R_1 - R_2} \begin{bmatrix} 1 & 0\\ 0 & 1 \\ 0 & 0 \\ 0 & 0\end{bmatrix}.$$ The dimension of $V_1$ is equal to the number of pivot variables, therefore dim$V_1 = 2$. Now for $V_2$: $$V_2 :=\begin{bmatrix} 0 & 0\\ 1 & -1 \\ 0 & 0 \\ -1 & 1 \end{bmatrix} \xrightarrow{swap \> R_1 \> and \> R_2} \begin{bmatrix} 1 & -1\\ 0 & 0 \\ 0 & 0 \\ -1 & 1\end{bmatrix} \xrightarrow{R^*_4 = R_4 + R_1} \begin{bmatrix} 1 & -1\\ 0 & 0 \\ 0 & 0 \\ 0 & 0 \end{bmatrix}.$$ Therefore, dim$V_2 = 1$
+    
+    We can rewrite the vectors in $V_2$ using the vectors in $V_1$: $$\begin{aligned} (0,1,0,-1) &= (1,0,0,-1) - (1,-1,0,0) \\ (0,-1,0,1) &= (1,-1,0,0) - (1,0,0,-1) \end{aligned}.$$ Therefore, $V_1$ spans $V_2$ and $V_1 \cap V_2 = V_2$. Using this answer, we can say that: $$\begin{aligned}\text{dim}(V_1 + V_2) &= \text{dim}V_1 + \text{dim}V_2	- \text{dim}(V_1 \cap V_2) \\ &= \text{dim}V_1 + \text{dim}V_2	- \text{dim}(V_2) \\ &= \text{dim}V_1 \\ &= 2\end{aligned}$$
 
 ###Introductory level question relating to Week 3:
 3.	Consider the map $T: \mathbb{R}^2 \implies \mathbb{R}$ given by the rule $T(x,y) = 2x + 3y$.
