@@ -36,6 +36,8 @@ Use some results from the course so far to prove that there must exist in nitely
 
 *Hint: There's a vague hint hidden in one of the lecture recordings!*
 
+**Answer:** The system of equations defined above are **homogenous**: therefore, there exists *at least one* solution to the system. Next, if we define an $m \times n$ matrix $\mathcal{A}$ as the matrix consisting of the of all the coefficients $a_{ij}: 1 \leq i \leq m, 1 \leq j \leq n, m < n$, then by definition $\mathcal{A}$ is not a square matrix. Therefore, $det\mathcal{A} = 0$. The determinant of some matrix $\mathcal{M}$ defined as the coefficient matrix of some system of linear equations  *determines* whether or not there exists a unique solution to that system: if $det\mathcal{M} \neq 0$ then there exists a unique solution to the system; if $det\mathcal{M} = 0$ then there are either *infinitely* many solutions or *none* whatsoever. We have already shown that at least one solution exists for the system given. Therefore, because $det\mathcal{A} = 0$, there must be infinitely many solutions.  
+
 ***
 2. Recall that for $T \in \mathcal{L}(V, W )$, where $V$ has basis $B = (v_1, \cdots, v_n)$ and where $W$ has basis $B' = (w_1,\cdots,w_m)$, that the matrix representation of $T$ is the matrix of column vectors: 
 $$\mathcal{M}(T) =\left([T_{v1}]_B' \quad [T_{v2}]_B'	\> \cdots	\> [T_{vn}]_B'\right)$$
@@ -45,17 +47,41 @@ to be definite integration over the interval $[0, 1]$.
 
 (a)	Find $\mathcal{M}(T)$ with respect to the standard bases $\mathcal{B} = (1,x)$ and $\mathcal{B}' = (1)$ of $\mathcal{P}_1(\mathbb{R})$ and $\mathbb{R}$.
 
-(b)	Use $\mathcal{M}(T)$ to find $\int_{0}^{1}(3+5x)dx$ through matrix multiplication. Afterwards, check that your result agrees with what you get by directly doing the integration.
+**Answer:** Suppose we have some vector $\vec{b} = [c_{1} \> c_{2}]^{T} \in span \, B$. The linear map $\mathcal{M}(T)$ that returns the definite integral of b over the range $[0,1]$ is:
+
+$$\mathcal{M}(T):=\begin{bmatrix} 1 & 0 \\ 0 & 1/2 \end{bmatrix} \implies \begin{bmatrix} 1 & 0 \\ 0 & 1/2 \end{bmatrix} * \begin{bmatrix} c_{1} \\ c_{2} \end{bmatrix} = \left[c_{1} + \frac{c_{2}}{2}\right]$$
+
+(b)	Use $\mathcal{M}(T)$ to find $\int_{0}^{1}(3+5x)dx$ through matrix multiplication. Afterwards, check that your result agrees with what you get by directly doing the integration.\
+
+**Answer:** We can verify this by computing the multiplication of the vector $\vec{x} = (3,5)$ and the matrix $\mathcal{M}(T)$:
+$$ \begin{bmatrix} 1 & 0 \\ 0 & 1/2 \end{bmatrix} * \begin{bmatrix} 3 \\ 5 \end{bmatrix} = \left[3 + \frac{5}{2}\right] = \frac{11}{2}$$
+which is what we would expect to see when evaluating the definite integral. We can confirm this analytically:
+$$T((3+5x)) =	\int_{0}^{1}(3+5x) dx = \left[3x+\frac{5}{2}x^{2}\right]_{0}^{1} = \left[3+\frac{5}{2} - 0\right] = \frac{11}{2}$$
 
 ***
 #####Introductory level question relating to Week 4:
 
 3. Consider the linear operator $T \in \mathcal{L}(\mathbb{R}^2)$ defined by
-$$T(x,y) = (3x + 2y, 3x	2y).$$
+$$T(x,y) = (3x + 2y, 3x - 2y).$$
     
     (a)	Either show that this operator is injective or surjective -- your choice!
+    
+    **Answer:** First, let's rewrite the operator as the combination of a square ($2\times2$) matrix and a vector: 
+    $$T(x,y) = \mathcal{A}\vec{x} = \begin{bmatrix} 3 & 2 \\ 3 & -2 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 3x + 2y \\ 3x - 2y \end{bmatrix}$$ From this we can see that $det\mathcal{A} = -12 \neq 0$. Therefore, the matrix $\mathcal{A}$ is invertible. Now, Proposition 3.17 in the course notes states that if a matrix is invertible iff it is bijective. Therefore, because $\mathcal{A}$ in invertible, it is injective and surjective -- your choice.
     (b)	Use a result from the course to conclude that $T$ must be an invertible operator.
-    (c) Show that the one-dimensional subspace $U = span (1,	3)$  is invariant under $T$.
+    
+    **Answer:** See above.
+    
+    (c) Show that the one-dimensional subspace $U = span ((1,	-3))$  is invariant under $T$.
+    
+    **Answer:** First, note that $U = span((1,-3)) \equiv \left\{au: a \in \mathbb{R}, u = (1,-3) \in U\right\}$. This gives us:
+    $$\begin{aligned} T(a,-3a) &= (3*(a) + 2*(-3a), 3*(a) - 2*(-3a)) \\
+    &=(3a + (-6a), 3a-(-6a)) \\
+    &=(-3a,9a) \\
+    &=-3a(1,-3) \\
+    &\in span((1,-3))
+    \end{aligned}$$
+    which shows that $\forall \> au: a \in \mathbb{R}, u \in U\left\{T(au) = (-3)au\right\}$, i.e. a scalar multiple of $au$. Therefore, $U$ is invariant under $T$.
 
 
 #####Extension question - will not be marked, just for interest!
