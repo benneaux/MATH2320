@@ -56,15 +56,17 @@ $$T (x,y) = (2x + 3y, 4y)$$
     \begin{bmatrix} 
     2 & 3\\ 0 & 4 
     \end{bmatrix} 
-    \xrightarrow{C^*_2 = C_2 - C_1} 
-    \begin{bmatrix} 
-    2 & 1\\ 0 & 4
-    \end{bmatrix} 
     \xrightarrow{R^*_2 = R_2 * 1/2} 
+    \begin{bmatrix} 
+    2 & 3\\ 0 & 2
+    \end{bmatrix} 
+    \xrightarrow{R^*_1 = R_1 - R_2} 
     \begin{bmatrix} 
     2 & 1\\ 0 & 2
     \end{bmatrix}.
   $$
+  
+  This is *not* the same matrix that we found in (a), and we know that it shouldn't be; each operator has a unique upper triangular matrix representation *with respect to a particular basis*. Given that we have calculated each matrix with respect to different bases, they should not be the same.
 
   (c)	For any nonzero $k \in \mathbb{R}$, the list of vectors $\mathcal{B}'' = ((1, 0), (1, k))$ is a basis of $\mathbb{\mathbb{R}}^{2}$. Show that $T$ has an upper-triangular matrix representation with respect to the basis $\mathcal{B}''$ (for all nonzero $k \in \mathbb{R})$.
 
@@ -154,7 +156,6 @@ Therefore, $T$ is nilpotent.
 
   (b)	Verify your conclusion by calculating $T^{dim \mathbb{C}^{5}}$.
   
-  
   (c)	You are given that  $\lambda = 0$ is an eigenvalue of $T$ . What are the corresponding eigenvectors?
 
 (d)	Describe the generalised eigenvectors corresponding to $\lambda = 0$.
@@ -163,7 +164,7 @@ Therefore, $T$ is nilpotent.
 
 ###Extension question - will not be marked, just for interest!
 
-4.	Can a nilpotent linear operator on a  nite-dimensional vector space be invertible? *Why/why not?*
+4.	Can a nilpotent linear operator on a  finite-dimensional vector space be invertible? *Why/why not?*
   
     Can an invertible linear operator on a  nite-dimensional vector space be nilpotent? *Why/why not?*
 
