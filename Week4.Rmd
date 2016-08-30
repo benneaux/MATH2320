@@ -2,12 +2,12 @@
 title: "MATH2320 Assignment 3"
 author: "Benjamin G. Moran, c3076448@uon.edu.au"
 date: "16 August 2016"
-output: 
-  pdf_document:
+output:
   html_document:
-    includes: 
+    includes:
       before_body: eqnnumber.js
     mathjax: default
+  pdf_document: null
 ---
 
 ```{r setup, include=FALSE}

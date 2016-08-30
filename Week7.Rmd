@@ -1,0 +1,175 @@
+---
+title: "Week7"
+author: "B. Moran"
+date: "6 September 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE)
+```
+**Due:** 5pm Tuesday 6th September 2016.
+
+If you have any questions about this assignment, please see or email your lecturer for this course, Dr Daniel Sutherland <Daniel.Sutherland@newcastle.edu.au>.
+
+***
+
+Questions which review material from Week 5:
+
+1. Consider the operator T \in L(\mathbb{\mathbb{R}}^{2}) de ned by
+
+$$T (x,y) = (2x + 3y, 4y)$$
+
+(a)	Show that $T$ has an upper-triangular matrix representation with respect to the standard basis $\mathcal{B} = ((1, 0), (0, 1))$ of $\mathbb{\mathbb{R}}^{2}$. Hence state the eigenvalues of $T$.
+
+**Answer:** The matrix representation of $T$ is:
+
+  $$
+    A = 
+      \begin{bmatrix}
+      2 & 3\\ 0 & 4
+      \end{bmatrix}
+  $$
+  We can reduce $A$ to the standard basis vectors via the following steps:
+
+  $$A =
+    \begin{bmatrix} 
+    2 & 3\\ 0 & 4 
+    \end{bmatrix} 
+    \xrightarrow{R^*_2 = R_2*1/4} 
+    \begin{bmatrix} 
+    2 & 3\\ 0 & 1
+    \end{bmatrix} 
+    \xrightarrow{R^*_1 = R_1 - 3*R_2} 
+    \begin{bmatrix} 
+    2 & 0\\ 0 & 1
+    \end{bmatrix} 
+    \xrightarrow{R^*_1 = R_1 * 1/2} 
+    \begin{bmatrix} 
+    1 & 0\\ 0 & 1
+    \end{bmatrix}.
+  $$
+
+(b)	Show that $T$ also has an upper-triangular matrix representation with respect to the basis $\mathcal{B}' = ((2, 0), (1, 2))$ of $\mathbb{\mathbb{R}}^{2}$. Is this the same matrix you found in part (a)? Should it be?
+
+  $$A =
+    \begin{bmatrix} 
+    2 & 3\\ 0 & 4 
+    \end{bmatrix} 
+    \xrightarrow{C^*_2 = C_2 - C_1} 
+    \begin{bmatrix} 
+    2 & 1\\ 0 & 4
+    \end{bmatrix} 
+    \xrightarrow{R^*_2 = R_2 * 1/2} 
+    \begin{bmatrix} 
+    2 & 1\\ 0 & 2
+    \end{bmatrix}.
+  $$
+
+  (c)	For any nonzero $k \in \mathbb{R}$, the list of vectors $\mathcal{B}'' = ((1, 0), (1, k))$ is a basis of $\mathbb{\mathbb{R}}^{2}$. Show that $T$ has an upper-triangular matrix representation with respect to the basis $\mathcal{B}''$ (for all nonzero $k \in \mathbb{R})$.
+
+  (d)	For what particular choice of $k$ will $T$ have a diagonal matrix representation? In this case, what does this tell you about the basis vectors in $\mathcal{B}''$?
+
+2. Consider the operator $T \in L(\mathbb{\mathbb{R}}^{3})$ defined by the matrix multiplication
+
+  $$
+    T(x,y,z) = 
+      \begin{pmatrix} 
+      -1 & 2 & 0 \\ 0 & 0 & 3 \\ 0 & 0 & 0 
+      \end{pmatrix}
+      \begin{pmatrix}
+      x \\ y \\ z 
+      \end{pmatrix}
+  $$
+  
+
+
+(a)	State the eigenvalues of $T$ , and  find all eigenvectors corresponding to each eigenvalue.
+
+
+
+(b)	Find all generalised eigenvectors corresponding to each eigenvalue.
+ 
+
+###Introductory level question relating to Week 6:
+
+3. Consider the operator $T \in \mathcal{L}(\mathbb{C}^{5})$ defined by
+
+$$T(z_{1}, z_{2}, z_{3}, z_{4}, z_{5}) = (0, z_{1}, 0, z_{2}, 0)$$
+
+(a)	Calculate $T^{2}$ and $T^{3}$ applied to $(z_{1}, z_{2}, z_{3}, z_{4}, z_{5})$. Is $T$ nilpotent?
+
+**Answer:** The matrix representation of $T$ is:
+
+  $$
+    A = 
+      \begin{bmatrix}
+      0 & 0 & 0 & 0 & 0 \\ 
+      1 & 0 & 0 & 0 & 0 \\ 
+      0 & 0 & 0 & 0 & 0 \\ 
+      0 & 1 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0
+      \end{bmatrix}
+  $$
+
+$A^{2}$ equals:
+  $$
+    A^{2} = 
+      \left(\begin{bmatrix}
+      0 & 0 & 0 & 0 & 0 \\ 
+      1 & 0 & 0 & 0 & 0 \\ 
+      0 & 0 & 0 & 0 & 0 \\ 
+      0 & 1 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0
+      \end{bmatrix}\right)^{2}
+      =
+      \begin{bmatrix}
+      0 & 0 & 0 & 0 & 0 \\ 
+      0 & 0 & 0 & 0 & 0 \\ 
+      0 & 0 & 0 & 0 & 0 \\ 
+      1 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0
+      \end{bmatrix}
+  $$
+and $A^{3}$ equals:
+  $$
+    A^{3} = 
+      \left(\begin{bmatrix}
+      0 & 0 & 0 & 0 & 0 \\ 
+      1 & 0 & 0 & 0 & 0 \\ 
+      0 & 0 & 0 & 0 & 0 \\ 
+      0 & 1 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0
+      \end{bmatrix}\right)^{3}
+      =
+      \begin{bmatrix}
+      0 & 0 & 0 & 0 & 0 \\ 
+      0 & 0 & 0 & 0 & 0 \\ 
+      0 & 0 & 0 & 0 & 0 \\ 
+      0 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0
+      \end{bmatrix}
+  $$
+Therefore, $T$ is nilpotent.
+
+  (b)	Verify your conclusion by calculating $T^{dim \mathbb{C}^{5}}$.
+  
+  
+  (c)	You are given that  $\lambda = 0$ is an eigenvalue of $T$ . What are the corresponding eigenvectors?
+
+(d)	Describe the generalised eigenvectors corresponding to $\lambda = 0$.
+
+(e)	Hence state the multiplicity of the eigenvalue $\lambda = 0$ and explain why $T$ cannot have any other eigenvalues.
+
+###Extension question - will not be marked, just for interest!
+
+4.	Can a nilpotent linear operator on a  nite-dimensional vector space be invertible? *Why/why not?*
+  
+    Can an invertible linear operator on a  nite-dimensional vector space be nilpotent? *Why/why not?*
+
+
+###Submitting your assignment (due 5pm Tuesday 6th September 2016)
+
+*Submit your assignment in hardcopy in your Demonstrator's pigeonhole in the Assignment boxes near the Maths Clinic, on the opposite wall to the Maths Clinic, left of the door to V109. We also ask that you scan your written work and submit it on the MATH2320 UoNline/Blackboard site as a backup and proof of submission, not as a substitute. __Note that we still require the hardcopy submitted in the Assignment Box for your Demonstrator to mark, even if you have submitted a backup on Blackboard.__*
+
+    
