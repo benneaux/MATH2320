@@ -2,7 +2,8 @@
 title: "Week7"
 author: "B. Moran"
 date: "6 September 2016"
-output: pdf_document
+output: 
+  pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -117,10 +118,88 @@ Now, our original, non-row-reduced matrix **A** was already an upper-triangular 
 
 (a)	State the eigenvalues of $T$ , and  find all eigenvectors corresponding to each eigenvalue.
 
-
+    **Answer:** The matrix $T$ is an upper triangular matrix, so we can read the eigenvalues off the main diagonal: $\lambda_{1} = -1$ with a multiplicty of $1$, and $\lambda_{2} = 0$ with a multiplicity of $2$.
+    For $\lambda_{1} = -1$, the corresponding eigenvector is:
+    $$
+      \begin{bmatrix} 
+        0 & 2 & 0 \\ 
+        0 & 1 & 3 \\ 
+        0 & 0 & 1
+      \end{bmatrix} 
+      \begin{bmatrix} 
+        x_{1} \\
+        x_{2} \\
+        x_{3}
+      \end{bmatrix} 
+      =
+      \begin{bmatrix} 
+        0 \\
+        0 \\
+        0
+      \end{bmatrix}
+    $$
+There's no pivot variable in the first column of $T$, so the matrix must map all $x_{1}$s into the null space. So the eigenvector for $\lambda_{1} = -1$ is $(1,0,0)$.
+For $\lambda_{2} = 0$, we get:
+    $$
+      \begin{bmatrix} 
+        -1 & 2 & 0 \\ 
+        0 & 0 & 3 \\ 
+        0 & 0 & 0
+      \end{bmatrix} 
+      \begin{bmatrix} 
+        x_{1} \\
+        x_{2} \\
+        x_{3}
+      \end{bmatrix} 
+      =
+      \begin{bmatrix} 
+        0 \\
+        0 \\
+        0
+      \end{bmatrix}
+    $$
+which implies that $x_{1} = 2x_{2}$. Therefore, the eigenvector for $\lambda_{2} = 0$ is $(2,1,0)$. But, for a $3\times3$ matrix we need another eigenvector, which we'll find in part (b).
 
 (b)	Find all generalised eigenvectors corresponding to each eigenvalue.
- 
+
+    **Answer:** First, let's find $T^{2}$.
+    $$
+      T^{2}
+      =
+      \left(
+        \begin{bmatrix} 
+          -1 & 2 & 0 \\ 
+          0 & 0 & 3 \\ 
+          0 & 0 & 0
+        \end{bmatrix}
+      \right)^{2}
+      =
+      \begin{bmatrix} 
+        1 & -2 & 6 \\ 
+        0 & 0 & 0 \\ 
+        0 & 0 & 0
+      \end{bmatrix}
+    $$
+So $x_{1}$ is our pivot and we have two free variables, $x_{2}$ and $x_{3}$. Setting $x_{2}=1$ and $x_{3}=0$ will return the eigenvector we found in part (a), so let's set $x_{2}=0$ and $x_{3}=1$. This leaves us with the generalised eigenvector for $\lambda_{2} = 0$ as $(-1, 0, 1/6)$. If we rewrite this vector as $(-2, 0, 1/3)$, we can check this is correct by evaluating:
+    $$
+      \begin{bmatrix} 
+        -1 & 2 & 0 \\ 
+        0 & 0 & 3 \\ 
+        0 & 0 & 0
+      \end{bmatrix} 
+      \begin{bmatrix} 
+        -2 \\
+        0 \\
+        1/2
+      \end{bmatrix} 
+      =
+      \begin{bmatrix} 
+        2 \\
+        1 \\
+        0
+      \end{bmatrix}
+    $$  
+which is equal to the eigenvector for $\lambda_{2} = 0$ that we found in part (a). Therefore, $(-2, 0, 1/3)$ is a generalised eigenvector for $\lambda_{2} = 0$. Now, the number of eigenvectors we have found is equal to dim(T); therefore there are no more to find.
 
 ###Introductory level question relating to Week 6:
 
