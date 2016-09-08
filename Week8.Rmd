@@ -1,0 +1,79 @@
+---
+title: "Week8"
+author: "Benjamin Moran"
+date: "8 September 2016"
+output: html_document
+---
+
+###Questions which review material from Week 6:
+
+1. Consider the operator $T \in \mathcal{L}(\mathbb{C}^{4})$, whose matrix representation with respect to the standard basis $\mathcal{B}$ of $\mathbb{C}^{4}$ is:
+  $$
+    M(T,\mathcal{B}) =
+      \begin{pmatrix}
+        2 & 0 & 1 & 2 \\
+        0 & 3 & 3 & 4 \\
+        0 & 0 & 2 & 0 \\
+        0 & 0 & 0 & 3
+      \end{pmatrix}
+  $$
+  
+    Define the vectors $v_{1} = (1, 0, 0, 0), v_{2} = (0, -3, 1, 0), v_{3} = (0, 2, 0, 0) \text{ and } v_{4} = (2, 0, 0, 1)$, and form the subspaces $U_{1} = \text{span}(v_{1}, v_{2}) \text{ and }U_{2} = span(v_{3}, v_{4})$. Let $\lambda_{1} = 2$ and $\lambda_{2} = 3$.
+
+(a)	Show that $v_{1}$ and $v_{2}$ are generalised eigenvectors corresponding to the eigenvalue $\lambda_{1}$. Show that $v_{3}$ and $v_{4}$ are generalised eigenvectors corresponding to the eigenvalue $\lambda_{2}$.
+
+(b)	Show that $\mathcal{B}' = (v_{1}, v_{2}, v_{3}, v_{4})$ is a basis of $\mathbb{C}^{4}$ consisting of generalised eigenvectors of $T$ .
+
+(c)	Calculate the matrix representation of $T$ with respect to the basis $\mathcal{B}'$ .
+
+
+2.	Let $T \in \mathcal{L}(\mathbb{C}^{4})$ be the operator from Question 1, and define the same vectors, subspaces and bases as before.
+
+(a)	The matrix representation of $T$ with respect to the basis $\mathcal{B}'$ that you calculated in Question 1(c) should be a block diagonal matrix of the form
+  $$
+    M(T,\mathcal{B}') =
+      \begin{pmatrix}
+        A_{1} & 0 \\
+        0 & A_{2}
+      \end{pmatrix}
+  $$
+
+    where the block matrices $A_{1}$ and $A_{2}$ are upper-triangular. State $A_{1}$ and $A_{2}$.
+
+(b)	The block matrix $A_{1}$ corresponds to the matrix representation of the operator $T\mid_{U_{1}}$ with respect to the basis $(v_{1}, v_{2})$ of $U_{1}$. Similarly, the block matrix $A_{2}$ corresponds to the matrix representation of the operator $T\mid_{U_{2}}$ with respect to the basis $(v_{3}, v_{4})$ of $U_{2}$.    
+Define the operators $N_{1}$ and $N_{2}$ to be $(T - \lambda_{1} I)\mid_{U_{1}}$ and $(T - \lambda_{2} I)\mid_{U_{2}}$ respectively. Write down the matrix representation of $N_{1}$ with respect to the basis $(v_{1}, v_{2})$ of $U_{1}$, and the matrix representation of $N_{2}$ with respect to the basis $(v_{3}, v_{4})$ of $U_{2}$.
+
+(c)	Verify that the operators $N_{1}$ and $N_{2}$ are nilpotent.
+
+###Introductory level question relating to Week 7:
+
+3. Let $a, b, c \in \mathbb{C}$ be nonzero scalars with $a \neq b.$ Consider the operator $T \in \mathcal{L}(\mathbb{C}^{5})$, whose matrix representation with respect to some basis of $\mathbb{C}^{5}$ is:
+  $$
+    M(T) =
+      \begin{pmatrix}
+        a & 0 & 0 & 0 & 0 \\
+        0 & a & 0 & 0 & 0 \\
+        0 & 0 & a & 0 & 0 \\
+        0 & 0 & 0 & b & c \\
+        0 & 0 & 0 & 0 & b
+      \end{pmatrix}
+  $$
+
+(a)	What is the characteristic polynomial, $q(z)$, of the operator $T$?
+
+(b)	List all the monic polynomials (of degree at least 1) that divide $q(z)$.
+
+(c)	Which of your polynomials from (b) have roots at each distinct eigenvalue of $T$?
+
+(d)	Hence determine the minimal polynomial, $p(z)$, of the operator $T$ by showing $p(T) = 0$.
+
+###Extension question - will not be marked, just for interest!
+
+4. Which of these matrices are expressed in Jordan normal form?
+
+
+###Submitting your assignment (due 5pm Tuesday 13th September 2016)
+
+*Submit your assignment in hardcopy in your Demonstrator's pigeonhole in the Assignment boxes near the Maths Clinic, on the opposite wall to the Maths Clinic, left of the door to v09. We also ask that you scan your written work and submit it on the MATH2320 UoNline/Blackboard site as a backup and proof of submission, not as a substitute. __Note that we still require the hardcopy submitted in the Assignment Box for your Demonstrator to mark, even if you have submitted a backup on Blackboard.__*
+
+
