@@ -22,6 +22,52 @@ output: html_document
 
 (a)	Show that $v_{1}$ and $v_{2}$ are generalised eigenvectors corresponding to the eigenvalue $\lambda_{1}$. Show that $v_{3}$ and $v_{4}$ are generalised eigenvectors corresponding to the eigenvalue $\lambda_{2}$.
 
+**Answer:** First, let's find $(M - \lambda I)$ for each eigenvalue and then solve for the corresponding eigenvector. For $\lambda_{1} = 2$, we get:
+  $$
+    (M - 2I) =
+      \begin{pmatrix}
+        0 & 0 & 1 & 2 \\
+        0 & 1 & 3 & 4 \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 1
+      \end{pmatrix}
+  $$
+  
+  Given that $M_{1,1} = 0$, it is fairly obvious that the eigenvalue corresponding to $\lambda_{1}=2$ is $(1, 0, 0, 0) = v_{1}$
+  
+  For $\lambda_{2} = 3$, we get:
+  $$
+    (M - 3I) =
+      \begin{pmatrix}
+        -1 & 0 & 1 & 2 \\
+        0 & 0 & 3 & 4 \\
+        0 & 0 & -1 & 0 \\
+        0 & 0 & 0 & 0
+      \end{pmatrix}
+  $$
+  TBC
+  
+  Next, let's calculate $M(T)^{2}$.
+  $$
+    M(T,\mathcal{B})^{2} =
+      \begin{pmatrix}
+        4 & 0 & 4 & 10 \\
+        0 & 9 & 15 & 24 \\
+        0 & 0 & 4 & 0 \\
+        0 & 0 & 0 & 9
+      \end{pmatrix}
+  $$
+  For $\lambda_{1} = 2$, we get:
+  $$
+    (M^{2} - 2I) =
+      \begin{pmatrix}
+        2 & 0 & 4 & 10 \\
+        0 & 7 & 15 & 24 \\
+        0 & 0 & 2 & 0 \\
+        0 & 0 & 0 & 7
+      \end{pmatrix}
+  $$
+
 (b)	Show that $\mathcal{B}' = (v_{1}, v_{2}, v_{3}, v_{4})$ is a basis of $\mathbb{C}^{4}$ consisting of generalised eigenvectors of $T$ .
 
 (c)	Calculate the matrix representation of $T$ with respect to the basis $\mathcal{B}'$ .
@@ -60,6 +106,7 @@ Define the operators $N_{1}$ and $N_{2}$ to be $(T - \lambda_{1} I)\mid_{U_{1}}$
   $$
 
 (a)	What is the characteristic polynomial, $q(z)$, of the operator $T$?
+**Answer:** Because this matrix is upper-triangular, we can basically read the characteristic polynomial off of the main diagonal. In this case $q(z) = (a-z)^{3}(b-z)^{2}$.
 
 (b)	List all the monic polynomials (of degree at least 1) that divide $q(z)$.
 
