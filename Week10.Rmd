@@ -1,0 +1,66 @@
+---
+title: "MATH2320 Assignment 9"
+subtitle: "Due: 5pm Tuesday 18th October 2016."
+author: "Benjamin Moran"
+output: pdf_document
+---
+
+*If you have any questions about this assignment, please see or email your lecturer for this course,
+Dr Daniel Sutherland $\langle$ Daniel.Sutherland@newcastle.edu.au $\rangle$.*
+
+###Questions which review material from Week 8 (Monday) and Week 9 (Friday):
+
+1.   Let $V$ be a finite-dimensional inner-product space.  Let $U$ be a subspace of V, and $(e_1,\dots,e_m)$ an orthonormal basis of $U$. Recall that the orthogonal projection of $V$ onto $U$ is the operator $P_U \in \mathcal{L}(V)$ defined by
+$$
+P_U v = \langle v, e_1 \rangle e_1 + \cdots + \langle v, e_m \rangle e_m.
+$$
+a.  Use the above definition to prove that $U^\perp \subseteq \>\text{null}\> P_U$.
+b.  Use the above definition to prove that null  $P_U \subseteq U^\perp$, and hence that null $P_U =U^{\perp}$.
+c.  Use the above definition to prove that $P^2_U = P_U$. That is, $P_U(P_Uv) = P_Uv$ for all $v \in V$.
+
+2. Let $V = C[-\pi/2, \pi/2]$ be the real vector space of continuous real-valued functions on the interval $[-\pi/2, \pi/2]$ with inner product
+$$
+\langle f,g \rangle = \frac{1}{\pi^3} \int \limits_{-\pi/2}^{\pi/2}f(x)g(x)dx.
+$$
+(a) Show that $\left(k_1(3x+\pi), k_2(4x-\pi),k_3(12x^2-\pi^2)\right)$ is an orthonormal list of vectors in $V$ scalars $k_1$ , $k_2$ and $k_3$ are
+
+$$
+k_1 = \sqrt{\frac{4}{7}}, \quad k_2 = \sqrt{\frac{3}{7}}, \quad k_3 = \frac{\sqrt{5}}{2\pi}
+$$
+(b) Verify the following identities for this inner-product space:
+$$
+\begin{aligned}
+\langle bx+c,cos(x)\rangle &=\frac{2c}{\pi^3} \qquad &\text{for} b,c \in \mathbb{R};\\
+\langle ax^2+c,cos(x)\rangle &=\frac{(2c)\pi^2-8)a}{2\pi^3}+\frac{2c}{\pi^3} \qquad &\text{for} a,c \in \mathbb{R};\\
+\end{aligned}
+$$
+
+**Introductory level question relating to Week 10:**
+
+3. Suppose $V$ is the inner-product space from Question 2. Let
+
+$$
+e_1 = k_1(3x+\pi), \qquad	e2 = k_2(4x-\pi), \qquad	e_3 = k_3(12x^2-\pi^2),
+$$
+so that $(e_1, e_2, e_3)$ is the orthonormal list of vectors from Question 2(a). Let $v = cos(x) \in V$ and consider the subspace $U = P_2(\mathbb{R})$ of $V$.
+
+(a)	Explain why $(e_1, e_2, e_3)$ is an orthonormal basis of $U$.
+
+(b)	Use the identities from Question 2(b) to verify the following inner products:
+$$
+\langle v, e_1 \rangle = \frac{2k_1}{\pi^2}, \quad \langle v, e_2 \rangle = -\frac{2k_2}{\pi^2}, \quad \langle v, e_3 \rangle = -\frac{4(12-\pi^2)k_3}{\pi^3}.
+$$
+(c)	Recall that for $u\in U$, the expression $\| v-u \|$ is minimised by choosing $u = P_U v$. Verify that the orthogonal projection of $v$ onto the subspace $U$ is given by $P_U v = u_0 + u_1x + u_2x^2$, where
+$$
+u_0 = \frac{3(20-\pi^2)}{\pi^3}, \qquad u_1 = 0, \qquad u_2 = = -\frac{60(12-\pi^2)}{\pi^5}.
+$$
+(d) Plot the continuous functions $u(x)$ and $v(x)$ over the interval $[-\pi/2,\pi/2]$.
+
+**Submitting your assignment (due 5pm Tuesday 18th October 2016)**
+
+*Submit your assignment in hardcopy in your Demonstrator's pigeonhole in the Assignment boxes
+near the Maths Clinic, on the opposite wall to the Maths Clinic, left of the door to V109. We also
+ask that you scan your written work and submit it on the MATH2320 UoNline/Blackboard site as
+a backup and proof of submission, not as a substitute. **Note that we still require the hardcopy
+submitted in the Assignment Box for your Demonstrator to mark, even if you have
+submitted a backup on Blackboard.***
